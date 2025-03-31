@@ -11,7 +11,7 @@ export function SigninPage() {
   const navigate = useNavigate();
 
   const onSignin = () => {
-      navigate("/");
+      navigate("/userhome");
   }
 
   return (

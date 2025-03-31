@@ -3,15 +3,15 @@ import { useState } from "react";
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 
-import {Link, useNavigate} from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export function SignupPage() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
   const navigate = useNavigate();
   const onSignup = () => {
-   navigate("/signin");
-  }
+    navigate("/signin");
+  };
 
   return (
     <section className="grid text-center h-screen items-center p-8">
@@ -20,9 +20,53 @@ export function SignupPage() {
           Sign Up
         </Typography>
         <Typography className="mb-16 text-gray-600 font-normal text-[18px]">
-          Enter your email and password to sign up
+          Enter your details to sign up
         </Typography>
         <form action="#" className="mx-auto max-w-[24rem] text-left">
+          <div className="mb-6">
+            <label htmlFor="fullName">
+              <Typography
+                variant="small"
+                className="mb-2 block font-medium text-gray-900"
+              >
+                Full Name
+              </Typography>
+            </label>
+            <Input
+              id="fullName"
+              color="gray"
+              size="lg"
+              type="text"
+              name="fullName"
+              placeholder="Kirtan Patel"
+              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              labelProps={{
+                className: "hidden",
+              }}
+            />
+          </div>
+          <div className="mb-6">
+            <label htmlFor="company">
+              <Typography
+                variant="small"
+                className="mb-2 block font-medium text-gray-900"
+              >
+                Company
+              </Typography>
+            </label>
+            <Input
+              id="company"
+              color="gray"
+              size="lg"
+              type="text"
+              name="company"
+              placeholder="Your Company Name"
+              className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
+              labelProps={{
+                className: "hidden",
+              }}
+            />
+          </div>
           <div className="mb-6">
             <label htmlFor="email">
               <Typography
@@ -60,7 +104,7 @@ export function SignupPage() {
               labelProps={{
                 className: "hidden",
               }}
-              className="w-full placeholder:opacity-100 focus:border-t-primary   "
+              className="w-full placeholder:opacity-100 focus:border-t-primary"
               type={passwordShown ? "text" : "password"}
               icon={
                 <i onClick={togglePasswordVisiblity}>

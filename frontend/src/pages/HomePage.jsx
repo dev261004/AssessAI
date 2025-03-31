@@ -2,6 +2,7 @@ import Footer from "../components/Footer"
 import HeroSection from "../components/HeroSection"
 import HomeNav from "../components/HomeNav"
 import TeamSection from "../components/TeamSection"
+import WhyUs from "../components/WhyUs"
 
 const HomePage = () => {
    return (
@@ -9,9 +10,10 @@ const HomePage = () => {
       <div className="p-2 flex flex-col items-center justify-center">
          <HomeNav />
          <HeroSection />
+         <WhyUs />
          <TeamSection />
          <Footer />
-         <h1 className="text-3xl">this is home page</h1>
+
          
       </div>
       </>

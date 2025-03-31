@@ -56,9 +56,9 @@ function HeroSection() {
               className="mx-auto my-6 w-full leading-snug  !text-2xl lg:max-w-3xl lg:!text-5xl"
             >
               Get ready to experience a new level of{" "}
-              <span className="text-green-500 leading-snug ">performance</span>{" "}
+              <span className="text-green-500 leading-snug ">efficiency</span>{" "}
               and{" "}
-              <span className="leading-snug text-green-500">functionality</span>
+              <span className="leading-snug text-green-500">accuracy</span>
               .
             </Typography>
             <Typography
